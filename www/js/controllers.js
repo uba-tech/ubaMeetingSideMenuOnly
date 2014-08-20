@@ -37,20 +37,16 @@ angular.module('starter.controllers', [])
  	$http.get('json/schedule.json').success(function(data) {
  		// console.log(data);
  		$scope.sessions = data;
- 	});
- 	
+ 	}); 	
 }])
 
-.controller('SessionDetailCtrl', ['$scope', '$stateParams', 'SessionsInfo',
-	function($scope, $stateParams, SessionsInfo, $ionicNavBarDelegate)
-	{	
-		$scope.session = SessionsInfo.get($stateParams.sessionId);
-		
-		$scope.goBack = function() {
-    		$ionicNavBarDelegate.back();
-  	  	};
-	}
-])
+.controller('SessionDetailCtrl', function($scope, $stateParams) {
+})
+
+
+
+
+
 
 .controller('VendorCtrl', ['$scope', '$http', function($scope, $http) {
 	$http.get('json/vendors.json').success(function(data) {
@@ -58,12 +54,27 @@ angular.module('starter.controllers', [])
 	})
 }])
 
-.controller('VendorDetailCtrl', ['$scope', '$routeParams',
-	function($scope, $routeParams)
+.controller('VendorDetailCtrl', ['$scope', '$stateParams',
+	function($scope, $stateParams)
 	{	
-		$scope.name = $routeParams.name;
+		$scope.name = $stateParams.name;
 	}
 ]);
+
+
+
+
+
+// .controller('SessionDetailCtrl', ['$scope', '$stateParams', 'SessionsInfo',
+	// function($scope, $stateParams, SessionsInfo, $ionicNavBarDelegate)
+	// {	
+		// $scope.session = SessionsInfo.get($stateParams.sessionId);
+// 		
+		// $scope.goBack = function() {
+    		// $ionicNavBarDelegate.back();
+  	  	// };
+	// }
+// ])
 
 // .controller('PlaylistsCtrl', function($scope) {
   // $scope.playlists = [
@@ -78,3 +89,4 @@ angular.module('starter.controllers', [])
 // 
 // .controller('PlaylistCtrl', function($scope, $stateParams) {
 // });
+

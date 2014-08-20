@@ -51,17 +51,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           // })
           
       .state('app.schedule', {
-      url: "/schedule",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/schedule.html",
-          controller: 'ScheduleCtrl'
-        }
-      }
-    })
+      	url: "/schedule",
+      	views: {
+        	'menuContent' :{
+          		templateUrl: "templates/schedule.html",
+          		controller: 'ScheduleCtrl'
+        	}
+      	}
+      })
     
-    .state('app.session-detail', {
-      url: "/session-detail/:sessionId",
+    .state('app.session', {
+      url: "/schedule/:sessionId",
       views: {
       	'menuContent': {
       	  templateUrl: "/templates/detail.html",
@@ -111,9 +111,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
       }
     })
-    .state('vendorDetail/:vendorId', {
+    .state('app.vendorDetail', {
       url: "/vendors/vendorDetail/:vendorId",
-      	  templateUrl: "/templates/vendorDetail.html" 
+      views: {
+      	'menuContent': {
+      		templateUrl: "/templates/vendorDetail.html",
+      		controller: 'VendorDetailCtrl'
+      	}
+      }
+      	   
     })
     .state('app.information', {
       url: '/information',
