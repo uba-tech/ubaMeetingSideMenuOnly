@@ -40,6 +40,17 @@ angular.module('starter.controllers', [])
  	}); 	
 }])
 
+// .controller('SessionDetailCtrl', ['$scope', '$stateParams', 'SessionsInfo',
+	// function($scope, $stateParams, SessionsInfo, $ionicNavBarDelegate)
+	// {	
+		// $scope.session = SessionsInfo.get($stateParams.sessionId);
+// 		
+		// $scope.goBack = function() {
+    		// $ionicNavBarDelegate.back();
+  	  	// };
+	// }
+// ])
+
 .controller('SessionDetailCtrl', function($scope, $stateParams) {
 })
 
@@ -65,16 +76,7 @@ angular.module('starter.controllers', [])
 
 
 
-// .controller('SessionDetailCtrl', ['$scope', '$stateParams', 'SessionsInfo',
-	// function($scope, $stateParams, SessionsInfo, $ionicNavBarDelegate)
-	// {	
-		// $scope.session = SessionsInfo.get($stateParams.sessionId);
-// 		
-		// $scope.goBack = function() {
-    		// $ionicNavBarDelegate.back();
-  	  	// };
-	// }
-// ])
+
 
 // .controller('PlaylistsCtrl', function($scope) {
   // $scope.playlists = [
